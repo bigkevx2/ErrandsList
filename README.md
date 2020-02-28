@@ -1,4 +1,4 @@
-# boodschapp
+# ErrandsList
 
 ## Project setup
 ```
