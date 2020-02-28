@@ -1,8 +1,14 @@
 <template>
-    <div class="errand-line" v-bind:class="{'in-basket':Errand.completed}">
+    <div class="errand-line">
         <p>
-            <input type="checkbox" v-on:change="inBasket">
-            <span class="errand-title">{{Errand.title}}</span>
+            <span class="errand-title">
+            <input type="checkbox" v-on:change="$emit('in-basket', Errand.id)">
+            {{Errand.title}}            {{index}}
+            </span>
+            <span class="index-buttons">
+                <button @click="$emit('move-up', index)">Move up</button></span>
+            <span>
+                <button @click="$emit('move-down', index)">Move down</button></span>
             <button @click="$emit('del-errand', Errand.id)" class="del">x</button>
         </p>
     </div>
@@ -11,12 +17,7 @@
 <script>
     export default {
         name: "Errand",
-        props: ["Errand"],
-        methods: {
-            inBasket() {
-                this.Errand.completed = !this.Errand.completed;
-            }
-        }
+        props: ["Errand", "index"]
     }
 </script>
 
@@ -29,6 +30,11 @@
 
     .errand-title {
         margin-left: 30px;
+        width: 400px;
+    }
+
+    .index-buttons {
+        margin-left: 200px;
     }
 
     .in-basket {

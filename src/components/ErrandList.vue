@@ -1,8 +1,13 @@
 <template>
     <div>
-        <div v-bind:key="Errand.id" v-for="Errand in Errands">
+        <div v-bind:key="Errand.id" v-for="(Errand,index) in Errands">
             <Errand v-bind:Errand="Errand"
-                      v-on:del-errand="$emit('del-errand', Errand.id)"/>
+                    v-bind:index="index"
+                    v-on:del-errand="$emit('del-errand', Errand.id)"
+                    v-on:in-basket="$emit('in-basket', Errand.id)"
+                    v-on:move-up="$emit('move-up', index)"
+                    v-on:move-down="$emit('move-down', index)"
+            />
         </div>
     </div>
 </template>
