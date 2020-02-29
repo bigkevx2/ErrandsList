@@ -1,7 +1,8 @@
 <template>
     <div>
         <form @submit="addErrand">
-            <input type="text" v-model="title" name="title" placeholder="Add Errand...">
+            <input type="text" v-model="count" name="count" placeholder="count">
+            <input type="text" v-model="errand" name="title" placeholder="Errand...">
             <input type="submit" value="Submit" class="btn">
         </form>
     </div>
@@ -12,7 +13,8 @@
         name: "AddErrand",
         data() {
             return {
-                title: ''
+                errand: '',
+                count: ''
             }
         },
         methods: {
@@ -20,10 +22,12 @@
                 e.preventDefault();
                 const newErrand = {
                     id: Math.round(Math.random() * 1000),
-                    title: this.title,
+                    count: this.count,
+                    errand: this.errand,
                     completed: false
                 };
-                this.title='';
+                this.count='';
+                this.errand='';
                 this.$emit('add-errand', newErrand);
             }
         }
@@ -38,6 +42,8 @@
     input[type="text"] {
         flex: 10;
         padding: 5px;
+        height: 50px;
+        font-size: 25px;
     }
 
     input[type="submit"] {

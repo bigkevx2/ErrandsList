@@ -1,7 +1,7 @@
 <template>
     <div class="errand-line">
         <p>
-            <span class="errand-title">{{Errand.title}}</span>
+            <span class="errand-title">{{Errand.count}} x {{Errand.errand}}</span>
         </p>
     </div>
 </template>

@@ -3,10 +3,10 @@
         <p>
             <span class="errand-title">
             <input type="checkbox" v-on:change="$emit('in-basket', Errand.id)">
-            {{Errand.title}}            {{index}}
+                {{Errand.count}} x {{Errand.errand}}
             </span>
             <span class="index-buttons">
-                <button @click="$emit('move-up', index)">Move up</button></span>
+                <button v-if="index!==0" @click="$emit('move-up', index)">Move up</button></span>
             <span>
                 <button @click="$emit('move-down', index)">Move down</button></span>
             <button @click="$emit('del-errand', Errand.id)" class="del">x</button>

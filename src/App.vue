@@ -31,22 +31,74 @@ export default {
       Errands: [
         {
         id: 1,
-        title: "Errand One",
+        count: '1',
+        errand: "Product toevoegen",
         completed: false
         },
         {
           id: 2,
-          title: "Errand Two",
+          count: '2',
+          errand: "Product aantal opgeven",
           completed: false
         },
         {
           id: 3,
-          title: "Errand Three",
+          count: '3',
+          errand: "Items afvinken",
+          completed: false
+        },
+        {
+          id: 4,
+          count: '4',
+          errand: "Afgevinkte items komen onderaan de lijst en zijn doorgestreept",
+          completed: false
+        },
+        {
+          id: 5,
+          count: '5',
+          errand: "Je kunt items uit de lijst verwijderen",
+          completed: false
+        },
+        {
+          id: 6,
+          count: '6',
+          errand: "Je kunt de volgorde van items aanpassen",
+          completed: false
+        },
+        {
+          id: 7,
+          count: '7',
+          errand: "Afgevinkte items zijn grayed out",
+          completed: false
+        },
+        {
+          id: 8,
+          count: '8',
+          errand: "De applicatie is responsive",
+          completed: false
+        },
+        {
+          id: 9,
+          count: '9',
+          errand: "Het is een Single Page Application",
+          completed: false
+        },
+        {
+          id: 10,
+          count: '10',
+          errand: "De app is gemaakt met een zelfgekozen framework (VUE)",
+          completed: false
+        },
+        {
+          id: 11,
+          count: '11',
+          errand: "Per groep een verschillend framework",
           completed: false
         }
       ],
-      InBasket: []
+      InBasket: [],
     }
+
   },
   methods: {
     deleteErrand(id) {
@@ -60,7 +112,8 @@ export default {
        object.push( this.Errands.filter(errand => errand.id === id));
       const obj = {
         id: object[0][0].id,
-        title: object[0][0].title,
+        count: object[0][0].count,
+        errand: object[0][0].errand,
         completed: true
       };
       this.InBasket = [...this.InBasket, obj];
@@ -69,13 +122,13 @@ export default {
     moveUp(index) {
       var element = this.Errands[index];
       this.Errands.splice(index,1);
-      if (index == 0) {
+      if (index === 0) {
         index = 1
       }
       this.Errands.splice((index - 1), 0, element);
     },
     moveDown(index) {
-      var element = this.Errands[index];
+      let element = this.Errands[index];
       this.Errands.splice(index,1);
       this.Errands.splice((index + 1), 0, element);
     }
@@ -107,4 +160,5 @@ export default {
   .btn:hover {
     background: #666;
   }
+
 </style>
