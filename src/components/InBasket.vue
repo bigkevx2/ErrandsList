@@ -22,4 +22,10 @@
     .errand-title {
         margin-left: 55px;
     }
+
+    @media only screen and (max-width: 768px){
+        .errand-title {
+            margin-left: 30px;
+        }
+    }
 </style>

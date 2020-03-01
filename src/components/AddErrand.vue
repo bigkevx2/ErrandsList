@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="wide">
         <form @submit="addErrand">
-            <input type="text" v-model="count" name="count" placeholder="count">
+            <input type="number" min="1" v-model="count" name="count" placeholder="Quantity">
             <input type="text" v-model="errand" name="title" placeholder="Errand...">
             <input type="submit" value="Submit" class="btn">
         </form>
@@ -36,17 +36,40 @@
 
 <style scoped>
     form {
-        display: flex;
+        display: block;
     }
 
-    input[type="text"] {
-        flex: 10;
+    ::placeholder {
+        color: lightgrey;
+    }
+    input[type="number"] {
         padding: 5px;
         height: 50px;
         font-size: 25px;
+        width: 33%;
+
+    }
+
+    input[type="text"] {
+        padding: 5px;
+        height: 50px;
+        font-size: 25px;
+        width: 33%;
     }
 
     input[type="submit"] {
-        flex: 2;
+        padding: 5px;
+        height: 50px;
+        font-size: 25px;
+        width: 33%;
+    }
+
+    @media only screen and (max-width: 768px){
+        input[type="text"] {
+            width: 360px;
+        }
+        input[type="submit"] {
+            width: 360px;
+        }
     }
 </style>
