@@ -14,14 +14,16 @@
 
 <style scoped>
     .header {
-        background: #333;
-        color: #fff;
+        background: #fdc414;
+        color: #333;
         text-align: center;
         padding: 10px;
+        /*font-size: 50px;*/
     }
 
-    .header a {
-        color: #fff;
-        padding-right: 5px;
-    }
+    /*@media only screen and (max-width: 768px){*/
+    /*    .header {*/
+    /*        font-size: 25px;*/
+    /*    }*/
+    /*}*/
 </style>

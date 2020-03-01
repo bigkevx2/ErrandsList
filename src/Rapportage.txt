@@ -1,0 +1,21 @@
+Rapportage met betrekking tot de ervaringen met VUE.JS ten opzichte van andere JS frameworks.
+
+Tja, het is heel moeilijk om een mening te vormen als deze in feite al voor je is gemaakt.
+De groep heeft besloten (en ik ben daar gewoon een onderdeel in geweest) om voor Angular te gaan.
+Waarom Angular? zie onze wiki op Azure DevOps https://dev.azure.com/194267/Move.IT/_wiki/wikis/Move.IT.wiki/8/Angular-vs-React-vs-Vue
+
+De reden waarom ik de BoodschApp gemaakt heb in Vue heeft alles te maken met het feit dat enkele teamleden voor aanvang
+van het semester al iets hadden gemaakt in React en Angular, de keuze was dus redelijk beperkt.
+Ook de ervaring van sommige onder ons met Angular heeft wel de doorslag gegeven, mede ook door het ontbreken van doorslaggevende
+goede argumenten om het vooral niet te doen. En je weet hoe het gaat met mensen en hun comfortzone.
+Ik heb geen problemen met het kiezen voor het (bijna) onbekende, wel legt het me enige beperking op om dieper te gaan met Vue omdat
+ik mijn tijd goed moet gaan plannen om ook Angular nu onder de knie te krijgen.
+
+Met betrekking tot dit product, ik sta erachter ook al is het grotendeels gebouwd op het fundament van de tutorial van Traversy Media
+https://www.youtube.com/watch?v=Wy9q22isx3U
+Dit mag natuurlijk geen verassing zijn aangezien het volgens mij redelijk de opzet is geweest, bouw het na, begrijp wat je doet en ga
+ermee spelen.
+
+Spelen is wat ik heb gedaan en ik ben redelijk tevreden.
+Toch zie ik nog bijzonder veel aanknopingspunten om het verder te optimaliseren en uit te bouwen maar zoals
+al aangegeven, er is maar zoveel tijd en er staan andere taken op me te wachten.

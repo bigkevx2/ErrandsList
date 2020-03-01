@@ -28,7 +28,6 @@
 
 <style scoped>
     .index-buttons-small {
-        /*visibility: hidden;*/
         display: none;
     }
     .errand-line {
@@ -37,28 +36,26 @@
         border-bottom: 1px #ccc dotted;
     }
 
-    .errand-title {
-        /*margin-left: 30px;*/
-    }
-
     .index-buttons {
         float: right;
     }
 
     button {
         margin-right: 10px;
-        width: 60px;
+        width: 75px;
         height: 20px;
+        background: #555;
+        color: #fff
     }
 
     button:hover {
-        background: whitesmoke;
+        background: #666;
     }
 
     .del {
-        background: #fb8d11;
+        background: #fdc414;
         color: black;
-        width: 60px;
+        width: 75px;
     }
     .del:hover {
         background: #ff0000;
@@ -78,8 +75,14 @@
         .index-buttons {
             display: none;
         }
-        .errand-title {
-            margin-left: 0px;
+
+        button {
+            width: 45%;
+            height: 30px;
+        }
+
+        .del {
+            width: 93%;
         }
     }
 </style>

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import Header from "@/components/layout/Header";
+  import Header from "@/components/Header";
   import AddErrand from "@/components/AddErrand";
   import ErrandList from "@/components/ErrandList";
   import InBasketList from "@/components/InBasketList";
@@ -102,13 +102,15 @@ export default {
   },
   methods: {
     deleteErrand(id) {
-      this.Errands = this.Errands.filter(errand => errand.id !== id);
+      if (confirm("This will delete the errand from the list, are you sure?")) {
+        this.Errands = this.Errands.filter(errand => errand.id !== id);
+      }
     },
     addErrand(newErrand) {
       this.Errands = [...this.Errands, newErrand];
     },
     placeInBasket(id) {
-      var object = [];
+      let object = [];
        object.push( this.Errands.filter(errand => errand.id === id));
       const obj = {
         id: object[0][0].id,
@@ -117,10 +119,10 @@ export default {
         completed: true
       };
       this.InBasket = [...this.InBasket, obj];
-      this.deleteErrand(id);
+      this.Errands = this.Errands.filter(errand => errand.id !== id);
     },
     moveUp(index) {
-      var element = this.Errands[index];
+      let element = this.Errands[index];
       this.Errands.splice(index,1);
       if (index === 0) {
         index = 1
@@ -139,8 +141,6 @@ export default {
 <style>
 * {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
 }
 
   body {
