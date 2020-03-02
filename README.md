@@ -1,4 +1,4 @@
-# ErrandsList
+# ErrandsList / BoodschApp
 
 ## Project setup
 ```
