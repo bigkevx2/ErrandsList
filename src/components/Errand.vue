@@ -6,13 +6,13 @@
             </span>
             <span class="index-buttons">
                 <button v-if="index!==0" @click="$emit('move-up', index)" class="button-up">Move up</button>
-                <button @click="$emit('move-down', index)" class="button-down">Move down</button>
+                <button v-if="index !== (arraySize-1)" @click="$emit('move-down', index)" class="button-down">Move down</button>
                 <button @click="$emit('del-errand', Errand.id)" class="del">Delete</button>
             </span>
         <div class="index-buttons-small">
             <span>
                 <button v-if="index!==0" @click="$emit('move-up', index)" class="button-up">Move up</button>
-                <button @click="$emit('move-down', index)" class="button-down">Move down</button>
+                <button v-if="index !== (arraySize-1)" @click="$emit('move-down', index)" class="button-down">Move down</button>
                 <button @click="$emit('del-errand', Errand.id)" class="del">Delete</button>
             </span>
         </div>
@@ -22,7 +22,7 @@
 <script>
     export default {
         name: "Errand",
-        props: ["Errand", "index"]
+        props: ["Errand", "index", "arraySize"]
     }
 </script>
 
@@ -32,7 +32,7 @@
     }
     .errand-line {
         background: #f4f4f4;
-        padding: 10px;
+        padding: 5px;
         border-bottom: 1px #ccc dotted;
     }
 
